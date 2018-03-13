@@ -2767,7 +2767,7 @@ def bot(op):
  
             elif "Spam: " in msg.text:
                   bctxt = msg.text.replace("Spam: ", "")
-                  t = 10
+                  t = 100
                   while(t):
                     vipro.sendText(msg.to, (bctxt))
                     t-=1
