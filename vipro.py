@@ -12,7 +12,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 vipro = LINETCR.LINE()
 #vipro.login(qr=True)
-vipro.login(token='EqDarjDcQekzxzWzzcpe.ccys8tuFvu++SAeG8YQBdG.lTP4YTx/8VRKS6SW0hdwRIjJ3YuF7R1b3vihBMz0Lws=')
+vipro.login(token='ErzfhdaQDcSVPdMbspDa./zA3eWqpAYcuHPFcSOdegG.++LU1tgiQOTYd/youOABguL40KbUeA/kJu7p3ptki+4=')
 vipro.loginResult()
 print "Vipro-Login Success\n\n=====[Sukses Login]====="
 
@@ -267,7 +267,7 @@ responsename = vipro.getProfile().displayName
 wait = {
     "LeaveRoom":True,
     "Bot":True,
-    "AutoJoin":False,
+    "AutoJoin":True,
     "AutoJoinCancel":False,
     "memberscancel":30,
     "Members":1,
@@ -927,14 +927,14 @@ def bot(op):
                                   vipro.sendMessage(msg)                                
                                   break  
                                   
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message                                  
                               
             if msg.text in ["Bot on"]:
                 wait["Bot"] = True
                 vipro.sendText(msg.to,"Bot Sudah On Kembali.")  
 
-        if op.type == 25:
+        if op.type == 26:
           if wait["Bot"] == True:    
             msg = op.message
             
